@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gospel Light Ministry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #032B44;
+            text-align: center;
+            background-color: #f0f0f0;
+        }
+        
+        #form-container {
+            width: 50%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        input[type="text"], input[type="date"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        
+        .gender-container {
+            margin-bottom: 20px;
+        }
+        
+        .gender-container label {
+            display: inline-block;
+            margin-right: 20px;
+        }
+        
+        .gender-container input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div id="form-container">
+        <h2>Gospel Light Ministry</h2>
+        <form action="/submit-form" method="post">
+            <label for="firstname">Firstname:</label>
+            <input type="text" id="firstname" name="firstname" required>
+            
+            <label for="lastname">Lastname:</label>
+            <input type="text" id="lastname" name="lastname" required>
+            
+            <label for="age">Age:</label>
+            <input type="date" id="age" name="age" required>
+            
+            <label for="service">Service Rendered:</label>
+            <input type="text" id="service" name="service" required>
+            
+            <div class="gender-container">
+                <label>Gender:</label>
+                <input type="radio" id="male" name="gender" value="male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Female</label>
+            </div>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

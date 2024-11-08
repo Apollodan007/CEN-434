@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classwork</title>
+  <script>
+    function factorial(n) {
+      let product = 1;
+      for (let i = n; i > 0; i--) {
+        product *= i;
+      }
+      return product;
+    }
+
+    function combination(x, y) {
+      if (x === y) {
+        [x, y] = [x+1, y];
+    } else if (x < y) {
+        [x, y] = [y, x];
+      }
+      return factorial(x) / (factorial(y) * factorial(x - y));
+    }
+
+    let x = 5;
+    let y = 5;
+    console.log(combination(x, y));
+  </script>
+</head>
+<body>
+
+</body>
+</html>

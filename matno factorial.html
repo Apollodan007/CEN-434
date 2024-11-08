@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>classwork</title>
+    <script type="text/javascript">
+        let matno = '21CJ029178';
+        let ans;
+        for(let i=0; i<matno.length; i++){
+            if(i==8||i==9){
+                ans = parseInt(matno[8])*10 + parseInt(matno[9]);
+                console.log(ans);
+            }
+        }
+        
+        function factor(num){
+            let product = 1;
+            for(let j=num; j>0; j--){
+                product = product * j;
+            }
+            console.log(product);
+        }
+
+        factor(ans);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
